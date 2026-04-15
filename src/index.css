@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --bg-dark: #0f172a;
+  --panel-bg: rgba(30, 41, 59, 0.7);
+  --text-main: #f8fafc;
+  --text-dim: #94a3b8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: radial-gradient(circle at center, #1e3a8a, #020617);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.app-container { max-width: 1000px; margin: 0 auto; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+}
+
+.glass-panel {
+  background: var(--panel-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  padding: 4rem;
+  box-shadow: 0 40px 100px -20px rgba(0,0,0,0.6);
+}
+
+h1 { font-size: 2.8rem; margin-bottom: 0.8rem; text-align: center; }
+.description { color: var(--text-dim); text-align: center; margin-bottom: 3rem; }
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  background: rgba(0,0,0,0.2);
+  padding: 0.5rem;
+  border-radius: 16px;
+}
+
+.tab-buttons button {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.tab-buttons button.active {
+  background: white;
+  color: #1e3a8a;
+}
+
+.content-area { min-height: 400px; }
+
+input {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 1.2rem;
+  border-radius: 14px;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  width: 100%;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 1.2rem;
+  border-radius: 14px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cert-card {
+  background: rgba(255,255,255,0.03);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.cert-card h3 { color: var(--primary); margin-bottom: 1rem; }
+.grade { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; }
+.meta, .issuer { font-size: 0.8rem; color: var(--text-dim); }
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-size: 1.2rem;
+}
